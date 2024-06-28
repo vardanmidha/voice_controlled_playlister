@@ -13,7 +13,8 @@
 import axios from 'axios';
 axios.defaults.withCredentials = true;
 const api = axios.create({
-  baseURL: 'http://localhost:5000/auth',
+  // baseURL: 'http://localhost:5000/auth',
+  baseURL: 'https://voice-controlled-playlister.onrender.com',
 });
 
 // THESE ARE ALL THE REQUESTS WE`LL BE MAKING, ALL REQUESTS HAVE A
