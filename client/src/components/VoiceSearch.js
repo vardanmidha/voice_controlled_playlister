@@ -8,10 +8,12 @@ function VoiceSearch() {
 
   const handleSearch = async () => {
     const response = await fetch(`https://api.duckduckgo.com/?q=${searchTerm}&format=json`);
+    
     const data = await response.json();
     setResult(data.AbstractText);
 
     const msg = new SpeechSynthesisUtterance(data.AbstractText);
+    
     window.speechSynthesis.speak(msg);
 
     // speak(data.AbstractText);
